@@ -9,7 +9,8 @@ const options = {
 };
 
 export function fetchBreeds() {
-  return fetch(`${BASE_URL}/breeds`, options).then(res => {
+  return fetch(`${BASE_URL}/breeds`, options)
+  .then(res => {
     if (!res.ok) {
       throw new Error(res.status);
     }
@@ -18,7 +19,8 @@ export function fetchBreeds() {
 }
 
 export function fetchCatByBreed(breedId) {
-  return fetch(`${BASE_URL}/images/search?breed_ids=${breedId}`, options).then(
+  return fetch(`${BASE_URL}/images/search?breed_ids=${breedId}`, options)
+  .then(
     res => {
       if (!res.ok) {
         throw new Error(res.status);
